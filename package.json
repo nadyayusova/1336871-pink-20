@@ -4,6 +4,7 @@
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "htmlhint": "^0.14.1",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
