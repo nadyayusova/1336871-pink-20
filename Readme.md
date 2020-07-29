@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Надежда Юсова](https://up.htmlacademy.ru/adaptive/20/user/1336871).
-* Наставник: `Неизвестно`.
+* Наставник: нет.
 
 ---
 
