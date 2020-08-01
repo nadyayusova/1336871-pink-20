@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Пинк</title>
 </head>
 <body class="page__body">
@@ -14,7 +15,7 @@
           <a class="main-nav__logo-link" href="index.html" aria-label="Ссылка на главную страницу сайта">
             <img class="main-nav__logo-img" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип программы Пинк">
           </a>
-          <button class="main-nav__toggle button-icon" type="button">
+          <button class="main-nav__toggle button button--icon" type="button" name="menu">
             <span class="visually-hidden">Открыть или закрыть меню</span>
           </button>
         </div>
@@ -37,7 +38,7 @@
         <p class="modal-error__description">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
         </p>
-        <button class="modal-error__button button-text">ОК</button>
+        <button class="modal-error__button button button--form" type="button" name="button-error">ОК</button>
       </div>
 
       <div class="modal-success modal-show">
@@ -45,7 +46,7 @@
         <p class="modal-success__description">
           Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
         </p>
-        <button class="modal-success__button button-text">Закрыть окно</button>
+        <button class="modal-success__button button button--form" type="button" name="button-success">Закрыть окно</button>
       </div>
     </main> -->
 
@@ -57,20 +58,20 @@
       <div class="page-footer__social">
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
-            <a href="https://twitter.com" class="page-footer__social-link">
-              <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+            <a class="page-footer__social-link" href="https://twitter.com">
+              <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a href="https://facebook.com" class="page-footer__social-link">
-              <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+            <a class="page-footer__social-link" href="https://facebook.com">
+              <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a href="https://www.youtube.com" class="page-footer__social-link">
-              <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+            <a class="page-footer__social-link" href="https://www.youtube.com">
+              <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>

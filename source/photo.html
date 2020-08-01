@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Пинк</title>
 </head>
 <body class="page__body">
@@ -14,7 +15,7 @@
           <a class="main-nav__logo-link" href="index.html" aria-label="Ссылка на главную страницу сайта">
             <img class="main-nav__logo-img" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип программы Пинк">
           </a>
-          <button class="main-nav__toggle button-icon" type="button">
+          <button class="main-nav__toggle button button--icon" type="button" name="menu">
             <span class="visually-hidden">Открыть или закрыть меню</span>
           </button>
         </div>
@@ -31,7 +32,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Галерея фотографий, обработка и загрузка фотографии пользователя</h1>
       <h2 class="page-main__page-title">Фотографии пользователей</h2>
-
+      <!--и этот параграф тоже зря привязан к page-main-->
       <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
       <section class="gallery">
@@ -39,72 +40,72 @@
         <ul class="gallery__list">
           <li class="gallery__item">
             <a class="gallery__fullsize-image panorama" href="#">
-              <img src="https://via.placeholder.com/320x137" alt="Панорама из галереи">
+              <img src="https://via.placeholder.com/320x137" width="320" height="137" alt="Панорама из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Анна <span class="gallery__time-ago">(5 минут назад)</span></p>
               <p class="gallery__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 215</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo1"><span class="gallery__button-text">Нравится: 215</span></button>
             </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__fullsize-image" href="#">
-              <img src="https://via.placeholder.com/280x180" alt="Фото из галереи">
+              <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Левон <span class="gallery__time-ago">(5 часов назад)</span></p>
               <p class="gallery__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 356</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo2"><span class="gallery__button-text">Нравится: 356</span></button>
             </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__fullsize-image" href="#">
-              <img src="https://via.placeholder.com/280x180" alt="Фото из галереи">
+              <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Антон <span class="gallery__time-ago">(12 часов назад)</span></p>
               <p class="gallery__text">Соседи будут рады!</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 666</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo3"><span class="gallery__button-text">Нравится: 666</span></button>
             </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__fullsize-image" href="#">
-              <img src="https://via.placeholder.com/280x180" alt="Фото из галереи">
+              <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Борис <span class="gallery__time-ago">(20 часов назад)</span></p>
               <p class="gallery__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 215</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo4"><span class="gallery__button-text">Нравится: 215</span></button>
             </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__fullsize-image" href="#">
-              <img src="https://via.placeholder.com/280x180" alt="Фото из галереи">
+              <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Сергей <span class="gallery__time-ago">(25 часов назад)</span></p>
               <p class="gallery__text">Самая кубанская в мире!</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 4</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo5"><span class="gallery__button-text">Нравится: 4</span></button>
             </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__fullsize-image" href="#">
-              <img src="https://via.placeholder.com/280x180" alt="Фото из галереи">
+              <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Максим <span class="gallery__time-ago">(40 часов назад)</span></p>
               <p class="gallery__text">Где снег-то?</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 150</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo6"><span class="gallery__button-text">Нравится: 150</span></button>
             </div>
           </li>
           <li class="gallery__item">
             <a class="gallery__fullsize-image" href="#">
-              <img src="https://via.placeholder.com/280x180" alt="Фото из галереи">
+              <img src="https://via.placeholder.com/280x180" width="280" height="180" alt="Фото из галереи">
             </a>
             <div class="gallery__message">
               <p class="gallery__author">Надежда <span class="gallery__time-ago">(45 часов назад)</span></p>
               <p class="gallery__text">Всем GM и взаимные лайки!</p>
-              <button class="button gallery__likes" type="button"><span class="gallery__button-text">Нравится: 2560</span></button>
+              <button class="button gallery__likes" type="button" name="likes-photo7"><span class="gallery__button-text">Нравится: 2560</span></button>
             </div>
           </li>
         </ul>
@@ -119,20 +120,20 @@
       <div class="page-footer__social">
         <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
-            <a href="https://twitter.com" class="page-footer__social-link">
-              <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+            <a class="page-footer__social-link" href="https://twitter.com">
+              <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a href="https://facebook.com" class="page-footer__social-link">
-              <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+            <a class="page-footer__social-link" href="https://facebook.com">
+              <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="page-footer__social-item">
-            <a href="https://www.youtube.com" class="page-footer__social-link">
-              <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+            <a class="page-footer__social-link" href="https://www.youtube.com">
+              <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
