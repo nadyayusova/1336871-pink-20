@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <!-- <link rel="stylesheet" href="css/..."> -->
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Пинк</title>
   </head>
   <body class="page__body">
     <div class="page-wrapper">
 
       <header class="page-header">
+        <!--Классы main-nav--opened и main-nav--nojs уберутся при открытии, если есть JS-->
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <div class="main-nav__controls">
           <!--нужен ли href в данной ссылке, ведь это и так главная страница?-->
             <a class="main-nav__logo-link" href="index.html" aria-label="Ссылка на главную страницу сайта">
               <img class="main-nav__logo-img" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип программы Пинк">
             </a>
-            <button class="main-nav__toggle button-icon" type="button">
+            <button class="main-nav__toggle button button--icon" type="button" name="menu">
               <span class="visually-hidden">Открыть или закрыть меню</span>
             </button>
           </div>
@@ -33,24 +34,26 @@
 
       <main class="page-main">
         <h1 class="visually-hidden">Пинк это мобильное приложение для раскрашивания серых будней в розовый цвет</h1>
-        <h2 class="page-main__page-title">Взгляните на жизнь иначе!</h2>
+        <!--этот блок зря привязан к page-main, возможно, его надо сделать отдельным блоком, просто page-title-->
+        <!-- <h2 class="page-main__page-title">Взгляните на жизнь иначе!</h2> -->
+        <h2 class="page-title page-title--index">Взгляните на жизнь иначе!</h2>
 
         <section class="download">
           <h3 class="visually-hidden">Загрузка приложения</h3>
-          <a class="download__button button-text" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
+          <a class="download__button button button--text" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
           <ul class="download__options-list">
-            <li class="download__option download__option--iphone">
-              <a class="button-icon" href="https://www.apple.com/ios/app-store/">
+            <li class="download__options-item download__option--iphone">
+              <a class="button button--icon" href="https://www.apple.com/ios/app-store/">
                 <span class="visually-hidden">iPhone</span>
               </a>
             </li>
-            <li class="download__option download__option--android">
-              <a class="button-icon" href="https://play.google.com/store/apps/">
+            <li class="download__options-item download__option--android">
+              <a class="button button--icon" href="https://play.google.com/store/apps/">
                 <span class="visually-hidden">Android</span>
               </a>
             </li>
-            <li class="download__option download__option--windows">
-              <a class="button-icon" href="https://www.microsoft.com/uk-ua/store/apps/windows">
+            <li class="download__options-item download__option--windows">
+              <a class="button button--icon" href="https://www.microsoft.com/uk-ua/store/apps/windows">
                 <span class="visually-hidden">Windows Phone</span>
               </a>
             </li>
@@ -65,20 +68,20 @@
 
         <section class="advantages">
           <h3 class="visually-hidden">Преимущества приложения</h3>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <h3 class="advantages__header">Поднимает настроение</h3>
-              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__header">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item">
-              <h3 class="advantages__header">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
+          <dl class="advantages__list">
+            <div class="advantages__item">
+              <dt class="advantages__title">Поднимает настроение</dt>
+              <dd class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</dd>
+            </div>
+            <div class="advantages__item">
+              <dt class="advantages__title">Меняет мир вокруг</dt>
+              <dd class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</dd>
+            </div>
+            <div class="advantages__item">
+              <dt class="advantages__title">Заводит новых друзей</dt>
+              <dd class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
+            </div>
+          </dl>
         </section>
 
       </main>
@@ -91,20 +94,20 @@
         <div class="page-footer__social">
           <ul class="page-footer__social-list">
             <li class="page-footer__social-item">
-              <a href="https://twitter.com" class="page-footer__social-link">
-                <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+              <a class="page-footer__social-link" href="https://twitter.com">
+                <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
                 <span class="visually-hidden">Twitter</span>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="https://facebook.com" class="page-footer__social-link">
-                <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+              <a class="page-footer__social-link" href="https://facebook.com">
+                <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="https://www.youtube.com" class="page-footer__social-link">
-                <img src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
+              <a class="page-footer__social-link" href="https://www.youtube.com">
+                <img class="page-footer__social-logo" src="https://via.placeholder.com/48x48" width="48" height="48" alt="Логотип Twitter">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
