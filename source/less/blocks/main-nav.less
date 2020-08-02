@@ -1,0 +1,47 @@
+.main-nav {
+  color: @text-color-menu;
+}
+
+//.main-nav--opened
+//.main-nav--nojs
+
+.main-nav__controls {
+  min-height: 70px;
+  // outline: red solid 1px;
+  // outline-offset: -1px;
+
+  background-color: @bg-color-menu;
+  // box-shadow: 0px 1px 0px #000000;
+  border-bottom: 1px solid @bg-color-menu-shadow;
+}
+
+// .main-nav__logo-link
+// .main-nav__logo-img
+// .main-nav__toggle
+
+.main-nav__list {
+  .reset-list();
+  background-color: @bg-color-menu;
+  // background-color: transparent;
+}
+
+.main-nav__item {
+  min-height: 64px;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: @text-size-normal;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-top: 1px solid @bg-color-menu-reflect;
+  border-bottom: 1px solid @bg-color-menu-shadow;
+  // box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15);
+}
+
+// .main-nav__item--active
+
+.main-nav__link {
+  color: inherit;
+}
