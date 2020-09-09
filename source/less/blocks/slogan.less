@@ -1,11 +1,25 @@
 .slogan {
   min-height: 184px;
   margin: 0;
+  padding: 50px 40px 20px;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: @text-size-small;
-  line-height: 20px;
+  line-height: 30px;
   text-align: center;
   color: @bg-color-menu;
+
+  @media (min-width: @page-width-tablet) {
+    min-height: 230px;
+    font-size: @text-size-normal;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    min-height: 239px;
+  }
+}
+
+.slogan__text {
+  margin: 0;
 }

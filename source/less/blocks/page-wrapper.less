@@ -1,17 +1,16 @@
 .page-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 100%;
   width: @page-width-mobile;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+
+  @media (min-width: @page-width-tablet) {
+    width: @page-width-tablet;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    width: @page-width-max;
+  }
 }
-
-// @media (min-width: @page-width-tablet) {
-//   .page-wrapper {
-//     width: @page-width-tablet;
-//   }
-// }
-
-// @media (min-width: @page-width-desktop) {
-//   .page-wrapper {
-//     width: @page-width-desktop;
-//   }
-// }

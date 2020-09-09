@@ -1,0 +1,40 @@
+.emotions {
+  display: flex;
+  margin-top: 1px;
+
+  @media (min-width: @page-width-tablet) {
+    order: 5;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 26px 58px 52px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 13px;
+    padding-bottom: 44px;
+  }
+}
+
+.emotions__title {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.emotions__description {
+  min-height: 200px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 1.7;
+
+  @media (min-width: @page-width-tablet) {
+    min-width: 500px;
+    min-height: 192px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    min-width: 820px;
+    min-height: 127px;
+  }
+}

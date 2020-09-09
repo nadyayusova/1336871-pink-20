@@ -1,0 +1,37 @@
+.personal-data {
+  @media (min-width: @page-width-tablet) {
+    margin: 0 0 38px;
+    border: none;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    width: ~"calc((@{page-width-desktop} - 50px) / 2)";
+    margin-top: -32px;
+    margin-left: 10px;
+  }
+}
+
+.personal-data__list {
+  .reset-list;
+
+  @media (min-width: @page-width-tablet) {
+    padding-right: 21px;
+  }
+}
+
+.personal-data__item {
+  @media (min-width: @page-width-tablet) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-top: 48px;
+  }
+}
+
+.personal-data__field {
+  @media (min-width: @page-width-tablet) {
+    flex-grow: 1;
+  }
+}

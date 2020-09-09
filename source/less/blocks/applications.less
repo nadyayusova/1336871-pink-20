@@ -1,0 +1,66 @@
+.applications,
+.applications__title {
+  background-color: @bg-color-sup;
+
+  @media (min-width: @page-width-tablet) {
+    background-color: @bg-color-basic;
+  }
+}
+
+.applications {
+  padding-bottom: 5px;
+
+  @media (min-width: @page-width-tablet) {
+    order: 2;
+    padding: 29px 0 16px 58px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    width: ~"calc((@{page-width-desktop} - 90px)/ 2)";
+    padding: 32px 0 16px 73px;
+  }
+}
+
+.applications__list {
+  .reset-list;
+}
+
+.applications__item {
+  margin-top: 15px;
+  margin-bottom: 37px;
+}
+
+.applications__label {
+  margin-bottom: 0;
+}
+
+.applications__label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  margin-right: 34px;
+  background-color: @bg-color-basic;
+  border: 2px solid @border-color-checkbox;
+  cursor: pointer;
+
+  @media (min-width: @page-width-tablet) {
+    margin-right: 22px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-right: 24px;
+  }
+}
+
+.applications__field:checked + .applications__label::before {
+  background-image: url("../img/icon-map-marker.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.applications__field:focus + .applications__label::before {
+  box-shadow: 0 0 1px 1px @input-shadow-color;
+}
