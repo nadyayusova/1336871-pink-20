@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: @page-width-mobile;
+
+  @media (min-width: @page-width-tablet) {
+    justify-content: space-between;
+    width: @page-width-tablet;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    width: @page-width-max;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+.form__send-button {
+  width: calc(@page-width-mobile - 20px * 2);
+  min-height: 63px;
+  margin-top: 27px;
+  margin-bottom: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @text-color-contrast;
+  background-color: @bg-color-button-form;
+  border: none;
+  border-radius: 3px;
+
+  @media (min-width: @page-width-tablet) {
+    order: 6;
+    min-width: 300px;
+    margin-left: 20px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-left: 10px;
+    margin-top: 24px;
+  }
+}
+
+.form__notes {
+  text-transform: uppercase;
+
+  @media (min-width: @page-width-tablet) {
+    order: 7;
+    margin-top: 49px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-right: 10px;
+  }
+}
+
+.form__text-accent {
+  color: @text-color-accent;
+}

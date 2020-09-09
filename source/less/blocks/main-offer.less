@@ -1,18 +1,27 @@
 .main-offer {
-  height: 215px;
-
-  padding-top: 46px;
-  // padding: 40px 50px 5px;
+  min-height: 215px;
+  padding: 40px 30px 5px;
 }
 
 .main-offer__text {
-  // margin: 46px 20px 35px;
-  margin: 0 20px 35px;
+  margin: 0 0 32px;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: lighter;
   font-size: @text-size-large;
-  line-height: 1.2;
+  line-height: 29px;
   text-align: center;
   color: @bg-color-menu;
+
+  @media (min-width: @page-width-tablet) {
+    margin-bottom: 0;
+
+    font-size: @text-size-xl;
+    line-height: 54px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    font-size: @text-size-xxl;
+    line-height: 68px;
+  }
 }

@@ -3,14 +3,28 @@
   flex-direction: column;
   align-items: center;
 
-  min-height: 271px;
-  padding: 20px;
+  flex-basis: 271px;
+  padding: 26px 20px 20px;
 
   background-color: @bg-color-accent;
+
+  @media (min-width: @page-width-tablet) {
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    z-index: 10;
+    width: 340px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @page-width-tablet) {
+    top: 450px; // это чтобы был не пустой
+  }
 }
 
 .download__button {
   color: @text-color-contrast;
+  text-decoration: none;
   border-color: @border-color-button-contrast;
 }
 
@@ -19,6 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   max-width: 240px;
   padding-top: 32px;
@@ -28,23 +43,23 @@
 .download__options-item {
   min-width: 48px;
   min-height: 57px;
+
+  &--iphone {
+    background: url("../img/logo-apple.svg") center center no-repeat;
+  }
+
+  &--android {
+    min-width: 50px;
+    background: url("../img/logo-android.svg") center 8px no-repeat;
+  }
+
+  &--windows {
+    background: url("../img/logo-microsoft.svg") center 12px no-repeat;
+  }
 }
 
 .download__options-item:not(:nth-child(3n)) {
-  margin-right: 31px; // от переполнения, примерно пока
-}
-
-.download__option--iphone {
-  background: url("../img/logo-apple.svg") center center no-repeat;
-}
-
-.download__option--android {
-  min-width: 50px;
-  background: url("../img/logo-android.svg") center 8px no-repeat;
-}
-
-.download__option--windows {
-  background: url("../img/logo-microsoft.svg") center 12px no-repeat;
+  margin-right: 31px;
 }
 
 .download__description {

@@ -1,29 +1,97 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 284px;
 
-  text-align: center;
+  @media (min-width: @page-width-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-left: 130px;
+    margin-right: 130px;
+  }
 }
 
-// .page-footer__logo
-// .page-footer__logo-image
+.page-footer__logo {
+  margin-bottom: 20px;
 
-// .page-footer__social
+  @media (min-width: @page-width-tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__logo-image {
+  display: block;
+}
+
+.page-footer__social {
+  width: 160px;
+  margin-bottom: 20px;
+}
 
 .page-footer__social-list {
   .reset-list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-// .page-footer__social-item
-// .page-footer__social-link
-// .page-footer__social-logo
+.page-footer__social-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
 
-// .page-footer__copyright
-.page-footer__copyright-description {
+  @media (min-width: @page-width-tablet) {
+    margin-bottom: 0;
+  }
+}
 
+.page-footer__social-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(40, 54, 69, 0.1);
+  border-radius: 50%;
+
+  background-color: @bg-color-basic;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+.page-footer__social-link--twitter {
+  background-image: url("../../img/icon-twitter.svg");
+}
+
+.page-footer__social-link--facebook {
+  background-image: url("../../img/icon-facebook.svg");
+}
+
+.page-footer__social-link--youtube {
+  background-image: url("../../img/icon-youtube.svg");
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__copyright-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: @text-size-small;
   line-height: 18px;
+  text-decoration: none;
+  color: inherit;
 }
-// .page-footer__copyright-link
-// .page-footer__copyright-image
+
+// .page-footer__copyright-image {
+//   display: block;
+// }

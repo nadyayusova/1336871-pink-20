@@ -1,0 +1,67 @@
+.achievements {
+  @media (min-width: @page-width-tablet) {
+    order: 4;
+    padding: 1px 60px 50px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding-bottom: 20px;
+  }
+}
+
+.achievements,
+.achievements__title {
+  background-color: @bg-color-sup;
+
+  @media (min-width: @page-width-tablet) {
+    background-color: @bg-color-basic;
+  }
+}
+
+.achievements__list {
+  .reset-list;
+
+  @media (min-width: @page-width-desktop) {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+    height: 200px;
+  }
+}
+
+.achievements__item {
+  margin-bottom: 44px;
+
+  @media (min-width: @page-width-tablet) {
+    margin: 44px 0 0;
+  }
+}
+
+.achievements__label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  margin-right: 34px;
+  background-color: @bg-color-basic;
+  border: 2px solid @border-color-checkbox;
+  border-radius: 2px;
+  cursor: pointer;
+
+  @media (min-width: @page-width-tablet) {
+    margin-right: 22px;
+  }
+}
+
+.achievements__field:checked + .achievements__label::before {
+  background-image: url("../img/icon-yes.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.achievements__field:focus + .achievements__label::before {
+  box-shadow: 0 0 1px 1px @input-shadow-color;
+}

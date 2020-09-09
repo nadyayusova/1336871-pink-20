@@ -1,5 +1,41 @@
-// .page-main
+.page-main__slogan {
+  padding: 45px 35px 48px;
 
-// этот блок зря привязан к page-main, возможно, его надо сделать отдельным блоком, просто page-title
-// .page-main__page-title
-// .page-main__text
+  @media (min-width: @page-width-tablet) {
+    padding: 92px 60px 76px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding: 92px 295px 88px;
+  }
+}
+
+.page-main__slogan--form {
+  padding: 45px 20px 14px;
+
+  @media (min-width: @page-width-tablet) {
+    padding: 92px 75px 19px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding: 92px 215px 60px;
+  }
+}
+
+.page-main__more-text {
+  display: none;
+
+  @media (min-width: @page-width-tablet) {
+    display: inline;
+    vertical-align: baseline;
+  }
+}
+
+.page-main__more-notes {
+  display: none;
+
+  @media (min-width: @page-width-desktop) {
+    display: inline;
+    vertical-align: baseline;
+  }
+}
