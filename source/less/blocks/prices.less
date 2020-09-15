@@ -1,19 +1,24 @@
 @tablewidth-mobile: calc(calc(@page-width-mobile - 40px) * 3);
-@fragmentwidth: calc(@page-width-mobile - 40px);
+// @fragmentwidth: calc(@page-width-mobile - 40px);
 @tablewidth-tablet: calc(@page-width-tablet - 20px * 2);
 @tablewidth-desktop: calc(@page-width-max - 130px * 2);
 @border-radius: 3px;
 
 .prices {
-  background-color: @bg-color-sup;
+  padding-top: 106px;
+  padding-bottom: 46px;
+  background: linear-gradient(-3.5deg, @bg-color-sup 95%, @bg-color-basic 5%);
+  // background-color: @bg-color-sup;
   overflow: hidden;
 
   @media (min-width: @page-width-tablet) {
-    padding: 20px 20px 20px;
+    padding: 97px 20px 31px;
+    background: linear-gradient(-3.5deg, @bg-color-sup 91%, @bg-color-basic 9%);
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 50px 130px 20px;
+    padding: 180px 130px 59px;
+    background: linear-gradient(-4.75deg, @bg-color-sup 82%, @bg-color-basic 18%);
   }
 }
 
@@ -23,7 +28,7 @@
 
 .prices__table {
   width: @tablewidth-mobile;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
   empty-cells: hide;
   box-sizing: content-box;
   border-collapse: separate;
@@ -45,6 +50,7 @@
   position: relative;
   height: 94px;
   color: @text-color-contrast;
+  vertical-align: top;
   background-color: @bg-color-table-header;
   border-left: 2px solid @border-color-th-vertical;
 
@@ -54,6 +60,7 @@
 
   @media (min-width: @page-width-desktop) {
     height: 94px;
+    // padding-top: 5px;
   }
 }
 
@@ -111,18 +118,19 @@
 }
 
 .prices__tariff {
-  margin: 0;
+  margin: 9px 0 0;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   text-transform: uppercase;
 
   @media (min-width: @page-width-tablet) {
-    font-size: @text-size-small;
+    font-size: 16px;
   }
 
   @media (min-width: @page-width-desktop) {
+    margin: 13px 0 3px;
     font-size: @text-size-normal;
   }
 }
@@ -131,10 +139,10 @@
   &::before {
     content: "ХИТ";
     position: absolute;
-    left: 13px;
-    top: 10px;
+    left: 15px;
+    top: 13px;
     z-index: 2;
-    font-weight: normal;
+    font-weight: 400;
     font-size: @text-size-small;
     line-height: 30px;
     text-align: center;
@@ -154,7 +162,7 @@
     z-index: 1;
     width: 74px;
     height: 74px;
-    background-image: url("../img/bg-hit.svg");
+    background-image: url("../img/bg-hit-mobile.svg");
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -170,13 +178,9 @@
 .prices__value {
   margin: 0;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: @text-size-normal;
-  line-height: 30px;
-
-  @media (min-width: @page-width-tablet) {
-    font-size: 16px;
-  }
+  line-height: 25px;
 
   @media (min-width: @page-width-desktop) {
     font-size: @text-size-large;
@@ -213,48 +217,47 @@
 
 .prices__availability {
   position: relative;
-  width: @fragmentwidth;
-  height: 59px;
-  padding: 10px 20px;
+  // width: @fragmentwidth;
+  height: 62px;
+  padding: 10px 22px;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-size: @text-size-small;
   line-height: 30px;
   text-transform: uppercase;
 
   @media (min-width: @page-width-tablet) {
-    width: 153px;
-    height: 45px;
+    width: 155px;
+    height: 48px;
   }
 
   @media (min-width: @page-width-desktop) {
-    width: 234px;
-    height: 59px;
+    width: 235px;
+    height: 62px;
   }
 }
 
-.prices__availability--yes {
-  &::after {
-    content: "";
-    position: absolute;
-    right: 17px;
+.prices__availability--yes::after {
+  content: "";
+  position: absolute;
+  right: 17px;
+  top: 19px;
+  width: 29px;
+  height: 21px;
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @media (min-width: @page-width-tablet) {
+    right: 59px;
+    top: 12px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    right: 101px;
     top: 19px;
-    width: 31px;
-    height: 21px;
-    background-image: url("../img/icon-yes.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-width: @page-width-tablet) {
-      right: 59px;
-      top: 12px;
-    }
-
-    @media (min-width: @page-width-desktop) {
-      right: 101px;
-      top: 19px;
-    }
   }
 }
 

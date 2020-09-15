@@ -1,19 +1,21 @@
-// .user-photo {
-//   // margin-bottom: -8px;
-// }
+.user-photo {
+  @media (min-width: @page-width-desktop) {
+    margin-bottom: 28px;
+  }
+}
 
 .user-photo__slogan {
   // padding: 23px 30px 42px;
-  padding: 23px 30px 30px;
+  padding: 43px 30px 42px;
   min-height: 140px;
 
   @media (min-width: @page-width-tablet) {
-    padding-top: 45px;
-    padding-bottom: 69px;
+    padding-top: 64px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding-top: 5px;
+    padding-top: 58px;
     padding-bottom: 66px;
   }
 }
@@ -31,7 +33,7 @@
     align-items: stretch;
     width: @page-width-tablet;
     padding-top: 57px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: @page-width-desktop) {
@@ -89,7 +91,7 @@
 .user-photo__customization::before {
   content: "";
   position: relative;
-  top: 160px;
+  top: 140px;
   display: block;
   // width: @page-width-mobile;
   height: 1px;
@@ -109,7 +111,8 @@
   align-items: center;
   max-width: 240px;
   margin: 0 auto;
-  padding: 35px 20px 75px;
+  // padding: 21px 14px 70px;
+  padding: 16px 17px 67px 11px;
 
   @media (min-width: @page-width-tablet) {
     flex-wrap: nowrap;
@@ -122,7 +125,7 @@
 
   @media (min-width: @page-width-desktop) {
     max-width: 100%;
-    margin: 0;
+    margin: -5px 0 0 -4px;
   }
 }
 
@@ -131,13 +134,20 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px 20px 10px 0;
+    padding: 17px 18px 16px 0;
     border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-right: 25px;
   }
 }
 
 .user-photo__tools-item:last-child {
   @media (min-width: @page-width-desktop) {
+    padding-top: 8px;
     border-bottom: none;
   }
 }
@@ -149,21 +159,66 @@
 }
 
 .user-photo__button {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   padding: 0;
-
-  outline: red solid 1px;
-  outline-offset: -1px;
+  border: none;
 
   @media (min-width: @page-width-tablet) {
-    margin-right: 10px;
+    width: 39px;
+    height: 39px;
+    margin-right: 21px;
   }
 
-  @media (min-width: @page-width-tablet) {
+  @media (min-width: @page-width-desktop) {
+    width: 70px;
+    height: 52px;
     margin-right: 44px;
   }
 }
+
+.user-photo__button--crop {
+  @media (min-width: @page-width-tablet) {
+    padding: 5px 6px 0 3px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding: 2px 0 0;
+  }
+}
+
+.user-photo__button--fill {
+  margin-top: 2px;
+  margin-left: 5px;
+
+  @media (min-width: @page-width-tablet) {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 9px 4px 0 3px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding: 4px 0 0 4px;
+    // padding-left: 4px;
+    // padding-top: 4px;
+  }
+}
+
+.user-photo__button--contrast {
+  @media (min-width: @page-width-tablet) {
+    padding: 0 11px 0 7px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding: 3px 0 0;
+  }
+}
+
+// .user-photo__button {
+//   @media (min-width: @page-width-desktop) {
+//     padding: 0;
+//   }
+// }
 
 .user-photo__button img {
   // object-fit: fill;
@@ -188,10 +243,14 @@
     display: block;
     width: 100%;
   }
+
+  @media (min-width: @page-width-desktop) {
+    top: 85px;
+  }
 }
 
 .user-photo__tools-item--active .user-photo__visual-range {
-  top: 100px;
+  top: 83px;
   left: 0;
   display: block;
   margin-top: 20px;
@@ -204,8 +263,8 @@
 .user-photo__range-thumb {
   position: relative;
   top: -5px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background-color: @bg-color-basic;
   border: 2px solid @text-color-accent;
   border-radius: 50%;
@@ -214,14 +273,38 @@
 
 .user-photo__range--crop ~ .user-photo__visual-range .user-photo__range-thumb {
   left: 80%;
+
+  @media (min-width: @page-width-tablet) {
+    left: 72%;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    left: 24%;
+  }
 }
 
 .user-photo__range--fill ~ .user-photo__visual-range .user-photo__range-thumb {
   left: 20%;
+
+  @media (min-width: @page-width-tablet) {
+    left: 12%;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    left: 85%;
+  }
 }
 
 .user-photo__range--contrast ~ .user-photo__visual-range .user-photo__range-thumb {
   left: 50%;
+
+  @media (min-width: @page-width-tablet) {
+    left: 47%;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    left: 55%;
+  }
 }
 
 // .price-scale .thumb:hover {
@@ -238,6 +321,7 @@
   padding-bottom: 41px;
 
   @media (min-width: @page-width-tablet) {
+    padding-top: 38px;
     padding-bottom: 0;
   }
 
@@ -249,16 +333,47 @@
 
 .user-photo__post {
   margin-bottom: 12px;
+  color: @text-color-accent;
+  border-color: @text-color-accent;
+
+  &:hover {
+    color: @text-color-contrast;
+    background-color: @text-color-accent;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @page-width-tablet) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @page-width-desktop) {
     margin-bottom: 0;
+  }
+}
+
+.user-photo__cancel {
+  color: @text-color-plain;
+  border-color: @bg-color-accent;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @text-color-plain;
   }
 }
 
 .user-photo__post,
 .user-photo__cancel {
-  color: @text-color-accent;
-  border-color: @text-color-accent;
+  @media (min-width: @page-width-tablet) {
+    min-width: 260px;
+  }
 
   @media (min-width: @page-width-desktop) {
     min-width: 183px;

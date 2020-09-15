@@ -4,21 +4,22 @@
   align-items: center;
 
   flex-basis: 271px;
-  padding: 26px 20px 20px;
+  padding: 28px 20px 30px;
 
   background-color: @bg-color-accent;
 
   @media (min-width: @page-width-tablet) {
     position: absolute;
-    top: 400px;
-    left: 20px;
+    top: 350px;
     z-index: 10;
     width: 340px;
+    padding: 28px 0 30px;
     background-color: transparent;
   }
 
-  @media (min-width: @page-width-tablet) {
-    top: 450px; // это чтобы был не пустой
+  @media (min-width: @page-width-desktop) {
+    top: 421px;
+    left: 110px;
   }
 }
 
@@ -26,6 +27,23 @@
   color: @text-color-contrast;
   text-decoration: none;
   border-color: @border-color-button-contrast;
+
+  &:hover {
+    color: @text-color-accent;
+    background-color: @bg-color-basic;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+
+  @media (min-width: @page-width-tablet) {
+    width: 300px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    font-size: 21px;
+  }
 }
 
 .download__options-list {
@@ -36,8 +54,18 @@
   align-items: center;
 
   max-width: 240px;
-  padding-top: 32px;
-  padding-bottom: 22px;
+  padding-top: 31px;
+  padding-bottom: 21px;
+
+  @media (min-width: @page-width-tablet) {
+    padding-top: 44px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding-top: 68px;
+    padding-bottom: 51px;
+  }
 }
 
 .download__options-item {
@@ -66,9 +94,13 @@
   margin: 0 20px;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: @text-size-small;
   line-height: 24px;
   text-align: center;
   color: @text-color-contrast;
+
+  @media (min-width: @page-width-tablet) {
+    font-size: @text-size-normal;
+  }
 }
