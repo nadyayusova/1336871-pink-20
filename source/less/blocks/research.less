@@ -4,28 +4,28 @@
   @media (min-width: @page-width-tablet) {
     position: relative;
     display: block;
-    padding: 102px 20px 20px 330px;
+    padding: 96px 20px 30px 330px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 115px 166px 120px 500px;
+    padding: 153px 166px 111px 500px;
+    background-color: @bg-color-sup;
   }
 }
 
-// .research__wrapper::before {
 .research::after {
   @media (min-width: @page-width-tablet) {
     content: "24";
     position: absolute;
-    left: 35px;
-    top: 30px;
+    left: 14px;
+    top: 50px;
     display: block;
     width: auto;
     height: auto;
-    padding: 110px 70px 70px;
+    padding: 110px 70px 80px;
 
     font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 96px;
     line-height: 1;
     color: @text-color-accent;
@@ -34,14 +34,13 @@
       url("../img/icon-timer.svg");
     background-repeat: no-repeat;
     background-position: center 55px, center 0;
-    background-size: 202px 202px, 238px 276px;
-    // background-size: 200px 200px, 250px 275px;
+    background-size: 202px 212px, 238px 283px;
   }
 
   @media (min-width: @page-width-desktop) {
     font-size: 120px;
-    left: 80px;
-    top: 45px;
+    left: 127px;
+    top: 41px;
     padding: 150px 85px 90px;
 
     background-color: @bg-color-sup;
@@ -57,16 +56,17 @@
   @media (min-width: @page-width-tablet) {
     margin: 0;
     margin-bottom: 10px;
+    margin-right: 100px;
 
     font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     font-size: @text-size-headers;
     line-height: 36px;
     color: @text-color-header;
   }
 
   @media (min-width: @page-width-desktop) {
-    margin-bottom: 21px;
+    margin-bottom: 25px;
     line-height: 30px;
   }
 }
@@ -74,15 +74,15 @@
 .research__description {
   @media (min-width: @page-width-tablet) {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     font-size: @text-size-small;
     line-height: 24px;
   }
 
   @media (min-width: @page-width-desktop) {
-    margin-bottom: 24px;
+    margin-bottom: 31px;
     font-size: @text-size-normal;
     line-height: 30px;
   }
@@ -91,9 +91,10 @@
 .research__link {
   @media (min-width: @page-width-tablet) {
     font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: normal;
+    font-weight: 400;
     font-size: @text-size-small;
     line-height: 24px;
+    color: @text-color-accent;
   }
 
   @media (min-width: @page-width-desktop) {

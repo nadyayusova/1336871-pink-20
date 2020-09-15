@@ -14,7 +14,7 @@
 }
 
 .slider__toggles {
-  word-spacing: 5px;
+  word-spacing: 8px;
   line-height: 1;
 }
 
@@ -28,10 +28,23 @@
   border-radius: 50%;
   background-color: @color-blue;
   opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .slider__toggle--current {
   background-color: @bg-color-basic;
   border-color: @color-blue;
   opacity: 1;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
 }

@@ -26,15 +26,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; // подкорректировать
+  padding: 10px 20px;
 
   @media (min-width: @page-width-tablet) {
     flex-basis: 110px; // высота (fxd column)
   }
 
   @media (min-width: @page-width-desktop) {
-    flex-basis: 150px; // ширина (fxd row)
+    flex-basis: 190px; // ширина (fxd row)
     flex-shrink: 0;
+    padding: 0;
   }
 }
 
@@ -53,16 +54,36 @@
   }
 }
 
-// .main-nav__logo-link
+.main-nav__logo-link {
+  @media (min-width: @page-width-tablet) {
+    margin-top: -16px;
+  }
+}
 
 .main-nav__logo-image {
   display: block;
 }
 
 .main-nav__toggle {
+  width: 50px;
+  height: 24px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-menu-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border: none;
+
   @media (min-width: @page-width-desktop) {
     display: none;
   }
+}
+
+.main-nav--opened .main-nav__toggle {
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/icon-menu-cross.svg");
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -89,6 +110,10 @@
   margin-bottom: -66px;
   background-color: @bg-color-menu;
 
+  @media (min-width: @page-width-tablet) {
+    margin-bottom: -110px;
+  }
+
   @media (min-width: @page-width-desktop) {
     flex-direction: row;
     margin-bottom: 0;
@@ -98,10 +123,10 @@
 
 .main-nav__item {
   min-height: 64px;
-  padding: 16px;
+  padding: 15px;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: @text-size-normal;
   line-height: 32px;
   text-transform: uppercase;
@@ -113,16 +138,44 @@
   @media (min-width: @page-width-desktop) {
     margin-left: @menu-item-left-margin;
     padding: 46px 0 10px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 18px;
     text-transform: none;
     border: none;
   }
 }
 
-// .main-nav__item--active
-
 .main-nav__link {
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    // @media (min-width: @page-width-desktop) {
+      color: @text-color-accent;
+    // }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    @media (min-width: @page-width-desktop) {
+      color: inherit;
+    }
+  }
+}
+
+.main-nav__item--active .main-nav__link {
+  @media (min-width: @page-width-desktop) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -9px;
+      left: 0;
+      height: 2px;
+      background: @text-color-menu;
+    }
+  }
 }

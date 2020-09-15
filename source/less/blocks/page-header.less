@@ -1,10 +1,11 @@
 .page-header {
   position: absolute;
+  z-index: 10;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 
-  @media (min-width: 960px) {
-    position: absolute;
+  @media (min-width: @page-width-desktop) {
+    // position: absolute;
     padding-left: 130px;
     padding-right: 130px;
   }
@@ -12,9 +13,8 @@
 
 .page-header.page-header--opened {
   position: relative;
-  z-index: 10;
 
-  @media (min-width: 960px) {
+  @media (min-width: @page-width-desktop) {
     position: absolute;
   }
 }

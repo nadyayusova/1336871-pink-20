@@ -1,12 +1,12 @@
 .page-title {
   min-height: 236px;
   margin: 0;
-  padding: 95px 30px 10px;
+  padding: 71px 30px 10px;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: @text-size-large;
-  line-height: 29px;
+  line-height: 32px;
   text-align: center;
   color: @text-color-contrast;
 
@@ -19,16 +19,18 @@
   @media (min-width: @page-width-tablet) {
     min-height: 440px;
     margin: 0;
-    padding: 139px 30px 10px;
+    padding: 126px 30px 5px;
 
-    font-size: @text-size-xl;
-    line-height: 48px;
+    font-size: @text-size-xxl;
+    line-height: 69px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
   @media (min-width: @page-width-desktop) {
     min-height: 394px;
+    padding: 120px 220px 10px;
+
     font-size: @text-size-xxl;
     line-height: 68px;
 
@@ -38,26 +40,28 @@
 
 .page-title--index {
   min-height: 462px;
-  padding: 88px 20px;
+  padding: 86px 20px;
+  // line-height: 31px;
 
   background-image: url("../img/iphone-hand-mobile@1x.png"),
     url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
-  background-position: 0 177px, center top;
+  background-position: 0 175px, center top;
 
   @media (min-width: @page-width-tablet) {
     min-height: 729px;
-    padding: 220px 385px 50px 40px;
-
+    padding: 204px 385px 50px 66px;
+    font-size: @text-size-xl;
+    line-height: 48px;
     background-image: url("../img/iphone-hand-tablet@1x.png"),
       url("../img/bg-back-tablet@1x.jpg");
-    background-position: -20px 183px, center top;
+    background-position: -20px 184px, center top;
   }
 
   @media (min-width: @page-width-desktop) {
     min-height: 853px;
-    padding: 220px 700px 50px 40px;
+    padding: 209px 790px 50px 150px;
 
     background-image: url("../img/iphone-hand-desktop@1x.png"),
       url("../img/bg-back-desktop@1x.jpg");

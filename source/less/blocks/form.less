@@ -3,14 +3,18 @@
   flex-wrap: wrap;
   justify-content: center;
   width: @page-width-mobile;
+  margin-top: -33px;
+  margin-bottom: 7px;
 
   @media (min-width: @page-width-tablet) {
     justify-content: space-between;
     width: @page-width-tablet;
+    margin: -28px 0 25px;
   }
 
   @media (min-width: @page-width-desktop) {
     width: @page-width-max;
+    margin-bottom: -26px;
     padding-left: 120px;
     padding-right: 120px;
   }
@@ -19,14 +23,28 @@
 .form__send-button {
   width: calc(@page-width-mobile - 20px * 2);
   min-height: 63px;
-  margin-top: 27px;
-  margin-bottom: 26px;
-  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: @text-size-normal;
   text-transform: uppercase;
   color: @text-color-contrast;
   background-color: @bg-color-button-form;
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #1C9B5E;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    color: @text-color-contrast;
+    background-color: #e5e5e5;
+  }
 
   @media (min-width: @page-width-tablet) {
     order: 6;
@@ -45,11 +63,12 @@
 
   @media (min-width: @page-width-tablet) {
     order: 7;
-    margin-top: 49px;
+    margin-top: 51px;
     margin-right: 20px;
   }
 
   @media (min-width: @page-width-desktop) {
+    margin-top: 45px;
     margin-right: 10px;
   }
 }

@@ -1,15 +1,15 @@
 .reviews {
   // width: @page-width-mobile;
   // width: 100%;
-  padding: 48px 20px 40px;
+  padding: 42px 20px 34px;
   background-color: @bg-color-basic;
 
   @media (min-width: @page-width-tablet) {
-    // padding: 90px 15px 17px;
+    padding: 92px 15px 17px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 193px 130px 10px;
+    padding: 184px 130px 10px;
   }
 }
 
@@ -24,8 +24,8 @@
   @media (min-width: @page-width-desktop) {
     content: "";
     position: absolute;
-    left: calc((@page-width-desktop - 79px) / 2);
-    top: -121px;
+    left: 431px;
+    top: -112px;
     display: block;
     width: 79px;
     height: 63px;
@@ -53,19 +53,23 @@
 .reviews__prev {
   @media (min-width: @page-width-desktop) {
     background-image: url("../img/icon-review-arrow-left.svg");
-    background-position: left center;
+    background-position: left 30px;
   }
 }
 
 .reviews__next {
   @media (min-width: @page-width-desktop) {
     background-image: url("../img/icon-review-arrow-right.svg");
-    background-position: right center;
+    background-position: right 30px;
   }
 }
 
 .reviews__list {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
+
+  @media (min-width: @page-width-tablet) {
+    margin-bottom: 35px;
+  }
 
   @media (min-width: @page-width-desktop) {
     margin-bottom: 0;
@@ -84,18 +88,18 @@
 
 .reviews__author {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: @text-size-normal;
   line-height: 30px;
   color: @text-color-header;
 
   @media (min-width: @page-width-tablet) {
     order: 2;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     font-size: 20px;
   }
 
@@ -113,11 +117,12 @@
     margin: 0;
 
     font-size: @text-size-small;
-    line-height: 30px;
+    line-height: 27px;
   }
 
   @media (min-width: @page-width-desktop) {
     font-size: @text-size-normal;
+    line-height: 34px;
   }
 }
 
@@ -125,13 +130,14 @@
   margin: 0;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-size: @text-size-small;
   line-height: 30px;
+  // transform: scaleX(1.05);
 
   @media (min-width: @page-width-tablet) {
     order: 1;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
     font-size: @text-size-normal;
   }
 }

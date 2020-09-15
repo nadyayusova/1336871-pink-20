@@ -1,0 +1,123 @@
+.modal-show {
+  position: absolute;
+  z-index: 30;
+  left: 0;
+  top: 20vh;
+  width: @page-width-mobile;
+  min-height: 289px;
+  background-color: @bg-color-basic;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 5px;
+
+  @media (min-width: @page-width-tablet) {
+    left: calc((@page-width-tablet - 460px) / 2);
+    width: 460px;
+    min-height: 363px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    left: calc((@page-width-max - 780px) / 2);
+    width: 780px;
+    min-height: 377px;
+  }
+}
+
+.modal-show__title {
+  margin: 44px 40px 37px;
+  font-weight: 700;
+  font-size: @text-size-normal;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: @page-width-tablet) {
+    font-size: @text-size-headers;
+    line-height: 40px;
+    margin: 49px 100px 37px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin: 49px 190px 37px;
+  }
+}
+
+.modal-show__description {
+  margin: 0 20px 25px;
+  font-weight: 400;
+  font-size: @text-size-small;
+  line-height: 24px;
+  text-align: center;
+
+  @media (min-width: @page-width-tablet) {
+    font-size: @text-size-normal;
+    margin: 0 70px 20px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin: 0 215px 68px;
+  }
+}
+
+.modal-show--success .modal-show__description {
+  margin: 0 27px 41px;
+
+  @media (min-width: @page-width-tablet) {
+    margin: 0 65px 35px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin: 0 200px 44px;
+  }
+}
+
+.modal-show__button {
+  display: block;
+  min-width: 276px;
+  min-height: 59px;
+  margin: 25px 22px 52px;
+  padding: 5px 20px;
+  font-weight: 700;
+  font-size: @text-size-normal;
+  line-height: 30px;
+  color: @text-color-contrast;
+  background-color: @bg-color-button-form;
+  border: 2px solid @bg-color-button-form;
+  border-radius: 2px;
+
+  @media (min-width: @page-width-tablet) {
+    min-width: 296px;
+    margin: 20px 82px 54px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin: 52px 242px;
+  }
+}
+
+.modal-show--success .modal-show__button {
+  margin: 52px 22px;
+  text-transform: uppercase;
+
+  @media (min-width: @page-width-tablet) {
+    margin: 52px 83px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    min-width: 456px;
+    margin: 52px 162px;
+  }
+}
+
+.modal-show__button-bg {
+  border: 1px solid @bg-color-basic;
+  border-radius: 5px;
+
+  @media (min-width: @page-width-desktop) {
+    background-color: @bg-color-sup;
+    border: 1px solid @bg-color-sup;
+  }
+}
+
+.modal-show--success .modal-show__button-bg {
+  background-color: @bg-color-sup;
+  border: 1px solid @bg-color-sup;
+}

@@ -19,6 +19,7 @@
     margin-left: 130px;
     margin-right: 130px;
     grid-template-columns: 300px 300px 300px;
+    row-gap: 54px;
   }
 }
 
@@ -26,10 +27,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 301px;
 
   @media (min-width: @page-width-tablet) {
     // width: 320px;
-    min-height: 475px;
+    // min-height: 475px;
 
     .gallery__likes {
       width: 100%;
@@ -40,24 +42,26 @@
 .gallery__item--panorama {
   position: relative;
   max-width: 100%;
+  margin-bottom: 20px;
 
   @media (min-width: @page-width-tablet) {
-    min-height: 680px;
+    // min-height: 680px;
+    margin-bottom: 50px;
   }
 }
 
 .gallery__item--panorama::after {
   content: "Панорама дня";
   width: 140px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   display: block;
   position: absolute;
   left: 50%;
   top: 0;
   z-index: 1;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: @text-size-xsmall;
   text-transform: uppercase;
   font-stretch: expanded;
@@ -79,8 +83,9 @@
 
 .gallery__image {
   display: block;
-  width: 100%;
-  // margin: auto;
+  width: auto;
+  object-fit: cover;
+  height: 100%;
 }
 //----------------------------------------------------------------------
 .gallery__message {
@@ -89,10 +94,8 @@
   align-items: flex-start;
 
   width: 100%;
-  min-height: 144px;
-  margin: 0 20px 20px;
-  padding: 25px 17px;
-  //   padding: 18px 17px 22px;
+  margin: 0 20px;
+  padding: 18px 8px 19px 17px;
 
   background-color: @bg-color-sup;
 
@@ -100,8 +103,13 @@
     align-items: stretch;
     width: 100%;
     min-height: 155px;
-    margin: 0 0 20px;
-    padding: 24px 28px 27px;
+    // margin: 0 0 20px;
+    margin: 0;
+    padding: 24px 26px 27px 31px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    padding-left: 27px;
   }
 }
 
@@ -118,7 +126,7 @@
 
     width: ~"calc(@{page-width-tablet} - 2 * 20px)";
     min-height: 80px;
-    padding: 24px 28px;
+    padding: 24px 30px 20px;
 
     .gallery__author {
       order: 1;
@@ -128,10 +136,14 @@
       order: 3;
     }
 
+    br {
+      display: none;
+    }
+
     .gallery__likes {
       order: 2;
       align-self: baseline;
-      max-width: 130px;
+      max-width: 112px;
       margin: 0;
     }
 
@@ -154,14 +166,14 @@
   margin: 0;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: @text-size-small;
   line-height: 24px;
 }
 
 .gallery__time-ago {
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: @text-size-xsmall;
   line-height: 24px;
   text-transform: uppercase;
@@ -169,12 +181,12 @@
 
 .gallery__text {
   min-width: 70%;
-  margin: 0;
+  margin: 0 0 4px 0;
   max-height: 97px;
   overflow: hidden;
 
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-size: @text-size-small;
   line-height: 24px;
 }
@@ -182,7 +194,7 @@
 .gallery__likes {
   min-width: fit-content;
   min-height: fit-content;
-  margin-top: 16px;
+  margin-top: 10px;
   padding: 0;
   // font-size: 0;
   text-align: left;
@@ -198,9 +210,9 @@
 
 .gallery__button-text {
   font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   font-size: @text-size-xsmall;
-  line-height: 24px;
+  line-height: 19px;
   text-transform: uppercase;
   color: @text-color-accent;
 }
@@ -211,10 +223,10 @@
   width: 13px;
   display: inline-block;
   vertical-align: middle;
-  margin: 5px 18px 0 0;
+  margin: 0 18px 0 0;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: left top;
 
   @media (min-width: @page-width-tablet) {
     display: none;
