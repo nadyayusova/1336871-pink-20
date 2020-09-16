@@ -1,6 +1,4 @@
 .reviews {
-  // width: @page-width-mobile;
-  // width: 100%;
   padding: 42px 20px 34px;
   background-color: @bg-color-basic;
 
@@ -47,6 +45,15 @@
     background-color: @bg-color-basic;
     background-repeat: no-repeat;
     background-size: 22px 41px;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
 
@@ -90,7 +97,6 @@
   display: inline-block;
   margin-bottom: 13px;
 
-  font-family: "Open Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: @text-size-normal;
@@ -129,11 +135,9 @@
 .reviews__text {
   margin: 0;
 
-  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: @text-size-small;
   line-height: 30px;
-  // transform: scaleX(1.05);
 
   @media (min-width: @page-width-tablet) {
     order: 1;

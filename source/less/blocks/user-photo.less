@@ -5,7 +5,6 @@
 }
 
 .user-photo__slogan {
-  // padding: 23px 30px 42px;
   padding: 43px 30px 42px;
   min-height: 140px;
 
@@ -25,7 +24,6 @@
   flex-direction: column;
   align-items: center;
   width: @page-width-mobile;
-  // padding: 20px 20px 30px;
   background-color: @bg-color-sup;
 
   @media (min-width: @page-width-tablet) {
@@ -45,7 +43,6 @@
 }
 
 .user-photo__photo {
-  // width: ~"calc(@{page-width-mobile} - 40px)";
   flex-shrink: 0;
   width: 280px;
   height: 374px;
@@ -95,8 +92,6 @@
   @media (min-width: @page-width-desktop) {
     width: 100%;
     margin: 0;
-    // margin-left: 10px;
-    // margin-right: 60px;
   }
 }
 
@@ -105,7 +100,6 @@
   position: relative;
   top: 140px;
   display: block;
-  // width: @page-width-mobile;
   height: 1px;
   background-color: rgba(40, 54, 69, 0.1);
 
@@ -123,7 +117,6 @@
   align-items: center;
   max-width: 240px;
   margin: 0 auto;
-  // padding: 21px 14px 70px;
   padding: 16px 17px 67px 11px;
 
   @media (min-width: @page-width-tablet) {
@@ -175,11 +168,16 @@
   height: 55px;
   padding: 0;
   border: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.3;
 
   @media (min-width: @page-width-tablet) {
     width: 39px;
     height: 39px;
     margin-right: 21px;
+    opacity: 1;
   }
 
   @media (min-width: @page-width-desktop) {
@@ -190,57 +188,77 @@
 }
 
 .user-photo__button--crop {
+  margin-top: -5px;
+  background-image: url("../img/icon-editor-crop.svg");
+  background-size: 47px;
+
   @media (min-width: @page-width-tablet) {
-    padding: 5px 6px 0 3px;
+    margin-top: 0;
+    background-image: url("../img/icon-editor-crop-active.svg");
+    background-size: 24px;
+    background-position: left 3px top 8px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 2px 0 0;
+    background-size: 47px;
+    background-position: center center;
   }
 }
 
 .user-photo__button--fill {
   margin-top: 2px;
-  margin-left: 5px;
+  margin-left: 2px;
+  background-image: url("../img/icon-editor-fill.svg");
+  background-size: 48px;
 
   @media (min-width: @page-width-tablet) {
     margin-top: 0;
     margin-left: 0;
-    padding: 9px 4px 0 3px;
+    background-image: url("../img/icon-editor-fill-active.svg");
+    background-size: 24px;
+    background-position: left 3px top 10px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 4px 0 0 4px;
-    // padding-left: 4px;
-    // padding-top: 4px;
+    background-size: 47px;
+    background-position: left 4px top 5px;
   }
 }
 
 .user-photo__button--contrast {
+  margin-top: -6px;
+  margin-left: -4px;
+  background-image: url("../img/icon-editor-contrast.svg");
+  background-size: 32px;
+
   @media (min-width: @page-width-tablet) {
-    padding: 0 11px 0 7px;
+    margin-top: 0;
+    margin-left: 0;
+    background-image: url("../img/icon-editor-contrast-active.svg");
+    background-size: 15px;
+    background-position: left 7px top 9px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 3px 0 0;
+    background-size: 32px;
+    background-position: center center;
   }
 }
 
-// .user-photo__button {
-//   @media (min-width: @page-width-desktop) {
-//     padding: 0;
-//   }
-// }
-
-.user-photo__button img {
-  // object-fit: fill;
-  // как выглядит неактивная кнопка
-  fill: grey;
+.user-photo__tools-item--active .user-photo__button {
+  opacity: 1;
 }
 
-.user-photo__tools-item--active img {
-  // как выглядит активная кнопка
-  fill: @text-color-accent;
+.user-photo__tools-item--active .user-photo__button--crop {
+  background-image: url("../img/icon-editor-crop-active.svg");
+}
+
+.user-photo__tools-item--active .user-photo__button--fill {
+  background-image: url("../img/icon-editor-fill-active.svg");
+}
+
+.user-photo__tools-item--active .user-photo__button--contrast {
+  background-image: url("../img/icon-editor-contrast-active.svg");
 }
 
 .user-photo__visual-range {
@@ -323,11 +341,6 @@
     left: 55%;
   }
 }
-
-// .price-scale .thumb:hover {
-//   top: -10px;
-//   border: 9px solid #ffffff;
-// }
 
 .user-photo__controls-list {
   .reset-list;
