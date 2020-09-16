@@ -1,5 +1,4 @@
 @tablewidth-mobile: calc(calc(@page-width-mobile - 40px) * 3);
-// @fragmentwidth: calc(@page-width-mobile - 40px);
 @tablewidth-tablet: calc(@page-width-tablet - 20px * 2);
 @tablewidth-desktop: calc(@page-width-max - 130px * 2);
 @border-radius: 3px;
@@ -8,7 +7,6 @@
   padding-top: 106px;
   padding-bottom: 46px;
   background: linear-gradient(-3.5deg, @bg-color-sup 95%, @bg-color-basic 5%);
-  // background-color: @bg-color-sup;
   overflow: hidden;
 
   @media (min-width: @page-width-tablet) {
@@ -36,12 +34,10 @@
   border-radius: @border-radius;
 
   @media (min-width: @page-width-tablet) {
-    // width: @tablewidth-tablet;
     width: 100%;
   }
 
   @media (min-width: @page-width-desktop) {
-    // width: @tablewidth-desktop;
     width: 100%;
   }
 }
@@ -60,7 +56,6 @@
 
   @media (min-width: @page-width-desktop) {
     height: 94px;
-    // padding-top: 5px;
   }
 }
 
@@ -74,8 +69,6 @@
 }
 
 .prices__feature--first-column {
-  // padding: 10px 15px;
-
   @media (min-width: @page-width-tablet) {
     padding: 5px 15px;
     font-size: @text-size-small;
@@ -119,7 +112,6 @@
 
 .prices__tariff {
   margin: 9px 0 0;
-  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
@@ -149,8 +141,13 @@
     transform: rotate(-45deg);
 
     @media (min-width: @page-width-tablet) {
-      left: 7px;
-      top: 5px;
+      left: 6px;
+      top: 8px;
+    }
+
+    @media (min-width: @page-width-desktop) {
+      left: 14px;
+      top: 13px;
     }
   }
 
@@ -168,16 +165,19 @@
 
     @media (min-width: @page-width-tablet) {
       left: 0;
-      width: 61px;
-      height: 61px;
-      // background-image: url("../img/bg-hit-tablet.svg");
+      width: 57px;
+      height: 57px;
+    }
+
+    @media (min-width: @page-width-desktop) {
+      width: 72px;
+      height: 72px;
     }
   }
 }
 
 .prices__value {
   margin: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 300;
   font-size: @text-size-normal;
   line-height: 25px;
@@ -217,11 +217,9 @@
 
 .prices__availability {
   position: relative;
-  // width: @fragmentwidth;
   height: 62px;
   padding: 10px 22px;
 
-  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: @text-size-small;
   line-height: 30px;
@@ -230,6 +228,7 @@
   @media (min-width: @page-width-tablet) {
     width: 155px;
     height: 48px;
+    padding: 8px 22px;
   }
 
   @media (min-width: @page-width-desktop) {
@@ -241,53 +240,70 @@
 .prices__availability--yes::after {
   content: "";
   position: absolute;
-  right: 17px;
-  top: 19px;
-  width: 29px;
-  height: 21px;
-  background-image: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  right: 19px;
+  top: 21px;
+  min-width: 26px;
+  max-width: 27px;
+  min-height: 14px;
+  max-height: 15px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid @color-green;
+  border-left: 3px solid @color-green;
+  transform: rotate(-45deg);
 
   @media (min-width: @page-width-tablet) {
-    right: 59px;
-    top: 12px;
+    right: 64px;
+    top: 15px;
   }
 
   @media (min-width: @page-width-desktop) {
-    right: 101px;
-    top: 19px;
+    right: 105px;
+    top: 22px;
   }
 }
 
 .prices__availability--no {
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    right: 19px;
-    top: 16px;
-    width: 27px;
-    height: 27px;
-    background-image: url("../img/icon-no.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    top: 28px;
+    right: 14px;
+    width: 35px;
+    height: 3px;
+    padding: 0;
+    background-color: #f25b26;
+    transform: rotate(45deg);
+  }
 
-    @media (min-width: @page-width-tablet) {
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: @page-width-tablet) {
+    &::before,
+    &::after {
       right: 60px;
-      top: 9px;
+      top: 21px;
     }
+  }
 
-    @media (min-width: @page-width-desktop) {
-      right: 103px;
-      top: 16px;
+  @media (min-width: @page-width-desktop) {
+    &::before,
+    &::after {
+      right: 100px;
+      top: 28px;
     }
   }
 }
 
 .prices__availability .prices__feature {
   @media (min-width: @page-width-tablet) {
-    display: none;
+    font-size: 0;
+    line-height: 0;
   }
 }
 
