@@ -1,6 +1,12 @@
 .emotions {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: -1px;
+
+  @media (max-width: @page-min-mobile) {
+    width: 320px;
+  }
 
   @media (min-width: @page-width-tablet) {
     order: 5;
@@ -24,6 +30,7 @@
 
 .emotions__description {
   min-height: 200px;
+  margin-left: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 1.7;
@@ -31,6 +38,7 @@
   @media (min-width: @page-width-tablet) {
     min-width: 500px;
     min-height: 192px;
+    margin-left: 0;
   }
 
   @media (min-width: @page-width-desktop) {

@@ -18,15 +18,15 @@
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <div class="main-nav__controls">
             <a class="main-nav__logo-link" href="#" aria-label="Ссылка на главную страницу сайта">
-              <svg class="main-nav__logo-mobile" width="74.426px" height="22.859px" role="img" aria-label="Логотип Пинк"
+              <svg class="main-nav__logo-mobile" width="74px" height="23px" role="img" aria-label="Логотип Пинк"
                 focusable="false">
                 <use xlink:href="#logo-pink-white-mobile"></use>
               </svg>
-              <svg class="main-nav__logo-tablet" width="146.3px" height="40.375px" role="img" aria-label="Логотип Пинк"
+              <svg class="main-nav__logo-tablet" width="146px" height="40px" role="img" aria-label="Логотип Пинк"
                 focusable="false">
                 <use xlink:href="#logo-pink-white-tablet"></use>
               </svg>
-              <svg class="main-nav__logo-desktop" width="146.3px" height="40.375px" role="img" aria-label="Логотип Пинк"
+              <svg class="main-nav__logo-desktop" width="146px" height="40px" role="img" aria-label="Логотип Пинк"
                 focusable="false">
                 <use xlink:href="#logo-pink-white-desktop"></use>
               </svg>
@@ -47,7 +47,9 @@
       <main class="page-main">
         <h1 class="visually-hidden">Пинк это мобильное приложение для раскрашивания серых будней в розовый цвет</h1>
         <div class="page-title page-title--index">
-          <span>Взгляните на жизнь иначе!</span>
+          <div class="page-title__container container">
+            <span>Взгляните на жизнь иначе!</span>
+          </div>
         </div>
 
         <section class="download">
@@ -55,17 +57,17 @@
           <a class="download__button button button--text" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
           <ul class="download__options-list">
             <li class="download__options-item download__options-item--iphone">
-              <a class="button button--icon" href="https://www.apple.com/ios/app-store/">
+              <a class="button button--icon" href="https://www.apple.com/ios/app-store/" target="_blank" rel="noopener noreferrer">
                 <span class="visually-hidden">iPhone</span>
               </a>
             </li>
             <li class="download__options-item download__options-item--android">
-              <a class="button button--icon" href="https://play.google.com/store/apps/">
+              <a class="button button--icon" href="https://play.google.com/store/apps/" target="_blank" rel="noopener noreferrer">
                 <span class="visually-hidden">Android</span>
               </a>
             </li>
             <li class="download__options-item download__options-item--windows">
-              <a class="button button--icon" href="https://www.microsoft.com/uk-ua/store/apps/windows">
+              <a class="button button--icon" href="https://www.microsoft.com/uk-ua/store/apps/windows" target="_blank" rel="noopener noreferrer">
                 <span class="visually-hidden">Windows Phone</span>
               </a>
             </li>
@@ -73,39 +75,43 @@
           <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </section>
 
-        <div class="main-offer">
+        <div class="main-offer container">
           <p class="main-offer__text">Устали от серости мегаполиса?</p>
           <p class="main-offer__text">Нам есть, что вам<br>предложить!</p>
         </div>
 
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества приложения</h2>
-          <dl class="advantages__list">
-            <div class="advantages__item">
-              <dt class="advantages__title">Поднимает настроение</dt>
-              <dd class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</dd>
-            </div>
-            <div class="advantages__item">
-              <dt class="advantages__title">Меняет мир вокруг</dt>
-              <dd class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</dd>
-            </div>
-            <div class="advantages__item">
-              <dt class="advantages__title">Заводит новых друзей</dt>
-              <dd class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
-            </div>
-          </dl>
+          <div class="advantages__container container">
+            <dl class="advantages__list">
+              <div class="advantages__item">
+                <dt class="advantages__title">Поднимает настроение</dt>
+                <dd class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</dd>
+              </div>
+              <div class="advantages__item">
+                <dt class="advantages__title">Меняет мир вокруг</dt>
+                <dd class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</dd>
+              </div>
+              <div class="advantages__item">
+                <dt class="advantages__title">Заводит новых друзей</dt>
+                <dd class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</dd>
+              </div>
+            </dl>
+          </div>
         </section>
 
         <section class="research">
           <h2 class="visually-hidden">Результаты исследования хитрых британских ученых</h2>
-          <p class="research__header">Эффект на&nbsp;24&nbsp;часа!</p>
-          <p class="research__description">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использоавния приложения длится целые сутки!</p>
-          <a class="research__link" href="#">Узнать больше об исследовании</a>
+          <div class="research__container container">
+            <p class="research__header">Эффект на&nbsp;24&nbsp;часа!</p>
+            <p class="research__description">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использоавния приложения длится целые сутки!</p>
+            <a class="research__link" href="#">Узнать больше об исследовании</a>
+          </div>
         </section>
 
         <section class="reviews">
           <h2 class="visually-hidden">Отзывы</h2>
-          <div class="reviews__wrapper slider">
+          <div class="reviews__wrapper slider container">
             <button class="reviews__prev button" type="button" aria-label="Предыдущий отзыв"></button>
             <div class="reviews__list slider__list">
               <blockquote class="reviews__item slider__item">
@@ -136,7 +142,7 @@
 
         <section class="prices">
           <h2 class="visually-hidden">Цены</h2>
-          <div class="prices-wrapper slider">
+          <div class="prices-wrapper prices__container slider container">
             <table class="prices__table">
 
               <tr class="prices__header-row">
@@ -210,27 +216,29 @@
         </section>
 
         <address class="contacts">
-          <p class="contacts__offer">Остались вопросы?<br>Свяжитесь с нами!</p>
-          <dl class="contacts__list">
-            <div class="contacts__item">
-              <dt class="contacts__header">Звоните:</dt>
-              <dd class="contacts__text">
-                <a class="contacts__content contacts__content--phone-no" href="tel:+78125556666">+7 (812) 555-66-66</a>
-              </dd>
-            </div>
-            <div class="contacts__item">
-              <dt class="contacts__header">Пишите:</dt>
-              <dd class="contacts__text">
-                <a class="contacts__content contacts__content--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-              </dd>
-            </div>
-            <div class="contacts__item">
-              <dt class="contacts__header contacts__header--address">Приезжайте в гости:</dt>
-              <dd class="contacts__text">
-                <a class="contacts__content contacts__content--address">ул. Большая<br>Конюшенная, 19/8</a>
-              </dd>
-            </div>
-          </dl>
+          <div class="contacts__container container">
+            <p class="contacts__offer">Остались вопросы?<br>Свяжитесь с нами!</p>
+            <dl class="contacts__list">
+              <div class="contacts__item">
+                <dt class="contacts__header">Звоните:</dt>
+                <dd class="contacts__text">
+                  <a class="contacts__content contacts__content--phone-no" href="tel:+78125556666">+7 (812) 555-66-66</a>
+                </dd>
+              </div>
+              <div class="contacts__item">
+                <dt class="contacts__header">Пишите:</dt>
+                <dd class="contacts__text">
+                  <a class="contacts__content contacts__content--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                </dd>
+              </div>
+              <div class="contacts__item">
+                <dt class="contacts__header contacts__header--address">Приезжайте в гости:</dt>
+                <dd class="contacts__text">
+                  <a class="contacts__content contacts__content--address">ул. Большая<br>Конюшенная, 19/8</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
           <div class="contacts__location-map">
               <iframe title="Карта с адресом компании Pink ул. Большая Конюшенная, 19/8" class="contacts__interactive-map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6044350650775!2d30.32260751612451!3d59.93870573316857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600195175801!5m2!1sru!2sru"
@@ -239,14 +247,14 @@
         </address>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer page-footer--container container">
         <div class="page-footer__logo">
           <a href="index.html" class="page-footer__logo-link">
-            <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="146.3px" height="40.375px" role="img"
+            <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="146px" height="40px" role="img"
               aria-label="Логотип Пинк" focusable="false">
               <use xlink:href="#logo-pink-blue-mobile"></use>
             </svg>
-            <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="146.3px" height="40.375px" role="img"
+            <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="146px" height="40px" role="img"
               aria-label="Логотип Пинк" focusable="false">
               <use xlink:href="#logo-pink-blue-desktop"></use>
             </svg>
@@ -274,9 +282,9 @@
         </div>
 
         <div class="page-footer__copyright">
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="page-footer__copyright-description">Разработано</span>
-            <svg class="page-footer__copyright-image" width="26.943px" height="34.09px" role="img" aria-label="Разработано  HTML Academy" focusable="false">
+            <svg class="page-footer__copyright-image" width="27px" height="34px" role="img" aria-label="Разработано  HTML Academy" focusable="false">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
           </a>

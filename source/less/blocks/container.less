@@ -1,0 +1,12 @@
+.container {
+  width: @page-width-mobile;
+  margin: 0 auto;
+
+  @media (min-width: @page-width-tablet) {
+    width: @page-width-tablet;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    width: @page-width-max;
+  }
+}

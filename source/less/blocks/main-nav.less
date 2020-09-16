@@ -3,12 +3,15 @@
 .main-nav {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   color: @text-color-menu;
   background-color: transparent;
 
   @media (min-width: @page-width-desktop) {
     flex-direction: row;
     justify-content: space-between;
+    width: calc(@page-width-desktop - 20px);
   }
 }
 

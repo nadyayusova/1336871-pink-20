@@ -1,35 +1,48 @@
 .advantages {
+  width: 100%;
   min-height: 786px;
 
-  padding: 83px 30px 10px;
-  background-image: url("../img/iphone-screen-mobile@1x.png"),
-    linear-gradient(-5.5deg, @bg-color-sup 96%, @bg-color-basic 4%);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center bottom -45px, center center;
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/iphone-screen-mobile@2x.png"),
-      linear-gradient(-5.5deg, @bg-color-sup 96%, @bg-color-basic 4%);
-    background-size: auto 320px, auto;
-  }
+  background-image: linear-gradient(-5.5deg, @bg-color-sup 96%, @bg-color-basic 4%);
+  background-repeat: no-repeat;
+  background-position: center center;
 
   @media (min-width: @page-width-tablet) {
     min-height: 510px;
+    background-image: linear-gradient(-4.5deg, @bg-color-sup 87%, @bg-color-basic 13%);
+  }
+
+  @media (min-width: @page-width-desktop) {
+    background: linear-gradient(-4.75deg, @bg-color-sup 79%, @bg-color-basic 21%);
+  }
+}
+
+.advantages__container {
+  padding: 83px 30px 287px;
+
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom -45px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+    background-size: auto 320px;
+  }
+
+  @media (min-width: @page-width-tablet) {
     padding: 99px 20px 0 330px;
-    background-image: url("../img/iphone-screen-3-tablet@1x.png"),
-      linear-gradient(-4.5deg, @bg-color-sup 87%, @bg-color-basic 13%);
-    background-position: 21px bottom, center center;
+
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    background-position: 21px bottom;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/iphone-screen-3-tablet@2x.png"),
-        linear-gradient(-4.5deg, @bg-color-sup 87%, @bg-color-basic 13%);
-      background-size: auto 481px, auto;
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-size: auto 481px;
     }
   }
 
   @media (min-width: @page-width-desktop) {
     padding: 414px 154px 10px;
-    background: linear-gradient(-4.75deg, @bg-color-sup 79%, @bg-color-basic 21%);
+    background-image: none;
   }
 }
 
@@ -41,6 +54,7 @@
   @media (min-width: @page-width-desktop) {
     flex-direction: row;
     justify-content: space-between;
+    max-width: 892px;
   }
 }
 

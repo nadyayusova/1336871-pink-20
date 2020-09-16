@@ -7,6 +7,7 @@
 .user-photo__slogan {
   padding: 43px 30px 42px;
   min-height: 140px;
+  background-color: @bg-color-basic;
 
   @media (min-width: @page-width-tablet) {
     padding-top: 64px;
@@ -20,11 +21,16 @@
 }
 
 .user-photo__form {
+  background-color: @bg-color-sup;
+}
+
+.user-photo__form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: @page-width-mobile;
-  background-color: @bg-color-sup;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: @page-width-tablet) {
     flex-direction: row;
@@ -36,8 +42,6 @@
 
   @media (min-width: @page-width-desktop) {
     width: ~"calc(@{page-width-desktop} - 20px)";
-    margin-left: 130px;
-    margin-right: 130px;
     padding: 57px 60px 57px 80px;
   }
 }

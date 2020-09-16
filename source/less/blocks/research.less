@@ -2,18 +2,26 @@
   display: none;
 
   @media (min-width: @page-width-tablet) {
-    position: relative;
     display: block;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    background-color: @bg-color-sup;
+  }
+}
+
+.research__container {
+  @media (min-width: @page-width-tablet) {
+    position: relative;
     padding: 96px 20px 30px 330px;
   }
 
   @media (min-width: @page-width-desktop) {
     padding: 153px 166px 111px 500px;
-    background-color: @bg-color-sup;
   }
 }
 
-.research::after {
+.research__container::after {
   @media (min-width: @page-width-tablet) {
     content: "24";
     position: absolute;

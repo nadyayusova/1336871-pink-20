@@ -3,6 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 284px;
   padding: 39px 0 37px;
 
@@ -16,8 +18,13 @@
 
   @media (min-width: @page-width-desktop) {
     min-height: 197px;
-    margin: 0 130px;
     padding: 0;
+  }
+}
+
+.page-footer--container {
+  @media (min-width: @page-width-desktop) {
+    width: 940px;
   }
 }
 

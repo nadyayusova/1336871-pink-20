@@ -19,15 +19,15 @@
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <div class="main-nav__controls">
             <a class="main-nav__logo-link" href="index.html" aria-label="Ссылка на главную страницу сайта">
-              <svg class="main-nav__logo-mobile" width="74.426px" height="22.859px" role="img" aria-label="Логотип Пинк"
+              <svg class="main-nav__logo-mobile" width="74px" height="23px" role="img" aria-label="Логотип Пинк"
                 focusable="false">
                 <use xlink:href="#logo-pink-white-mobile"></use>
               </svg>
-              <svg class="main-nav__logo-tablet" width="146.3px" height="40.375px" role="img" aria-label="Логотип Пинк"
+              <svg class="main-nav__logo-tablet" width="146px" height="40px" role="img" aria-label="Логотип Пинк"
                 focusable="false">
                 <use xlink:href="#logo-pink-white-tablet"></use>
               </svg>
-              <svg class="main-nav__logo-desktop" width="146.3px" height="40.375px" role="img" aria-label="Логотип Пинк"
+              <svg class="main-nav__logo-desktop" width="146px" height="40px" role="img" aria-label="Логотип Пинк"
                 focusable="false">
                 <use xlink:href="#logo-pink-white-desktop"></use>
               </svg>
@@ -50,10 +50,12 @@
       <main class="page-main">
         <h1 class="visually-hidden">Галерея фотографий, обработка и загрузка фотографии пользователя</h1>
         <div class="page-title">
-          <p>Фотографии<br>пользователей</p>
+          <div class="page-title__container container">
+            <p>Фотографии<br>пользователей</p>
+          </div>
         </div>
 
-        <p class="slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <p class="slogan container">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
         <section class="gallery">
           <h2 class="visually-hidden">Галерея фотографий пользователей</h2>
@@ -188,58 +190,60 @@
             <p class="slogan__text">Выкладывайте все, что накопилось в телефоне!</p>
           </div>
           <form class="user-photo__form" action="https://echo.htmlacademy.ru/courses" method="post">
-            <div class="user-photo__photo">
-              <input class="visually-hidden" type="file" id="upload-user-img" aria-label="Фото пользователя для загрузки">
-              <label class="user-photo__label" for="upload-user-img"></label>
-            </div>
-            <div class="user-photo__customization">
-              <ul class="user-photo__tools-list">
-                <li class="user-photo__tools-item user-photo__tools-item--active">
-                  <button class="button button--icon user-photo__button user-photo__button--crop" type="button" name="button-crop" aria-label="Инструмент Обрезать">
-                  </button>
-                  <input class="user-photo__range user-photo__range--crop visually-hidden" type="range" name="range-crop" min="0" max="100" step="1" value="80" aria-label="Настройка обрезки">
-                  <div class="user-photo__visual-range">
-                    <div class="user-photo__range-thumb" title="Обрезать"></div>
-                  </div>
-                </li>
-                <li class="user-photo__tools-item">
-                  <button class="button button--icon user-photo__button user-photo__button--fill" type="button" name="button-fill" aria-label="Инструмент Залить">
-                  </button>
-                  <input class="user-photo__range user-photo__range--fill visually-hidden" type="range" name="range-fill" min="0" max="100" step="1" value="20" aria-label="Настройка заливки">
-                  <div class="user-photo__visual-range">
-                    <div class="user-photo__range-thumb" title="Залить"></div>
-                  </div>
-                </li>
-                <li class="user-photo__tools-item">
-                  <button class="button button--icon user-photo__button user-photo__button--contrast" type="button" name="button-contrast" aria-label="Инструмент Контраст">
-                  </button>
-                  <input class="user-photo__range user-photo__range--contrast visually-hidden" type="range" name="range-contrast" min="0" max="100" step="1" value="50" aria-label="Настройка контраста">
-                  <div class="user-photo__visual-range">
-                    <div class="user-photo__range-thumb" title="Контраст"></div>
-                  </div>
-                </li>
-              </ul>
-              <ul class="user-photo__controls-list">
-                <li class="user-photo__controls-item">
-                  <button class="button button--text user-photo__post" type="submit" name="button-post">Запостить</button>
-                </li>
-                <li class="user-photo__controls-item">
-                  <button class="button button--text user-photo__cancel" type="reset" name="button-cancel">Отмена</button>
-                </li>
-              </ul>
+            <div class="user-photo__form-container container">
+              <div class="user-photo__photo">
+                <input class="visually-hidden" type="file" id="upload-user-img" aria-label="Фото пользователя для загрузки">
+                <label class="user-photo__label" for="upload-user-img"></label>
+              </div>
+              <div class="user-photo__customization">
+                <ul class="user-photo__tools-list">
+                  <li class="user-photo__tools-item user-photo__tools-item--active">
+                    <button class="button button--icon user-photo__button user-photo__button--crop" type="button" name="button-crop" aria-label="Инструмент Обрезать">
+                    </button>
+                    <input class="user-photo__range user-photo__range--crop visually-hidden" type="range" name="range-crop" min="0" max="100" step="1" value="80" aria-label="Настройка обрезки">
+                    <div class="user-photo__visual-range">
+                      <div class="user-photo__range-thumb" title="Обрезать"></div>
+                    </div>
+                  </li>
+                  <li class="user-photo__tools-item">
+                    <button class="button button--icon user-photo__button user-photo__button--fill" type="button" name="button-fill" aria-label="Инструмент Залить">
+                    </button>
+                    <input class="user-photo__range user-photo__range--fill visually-hidden" type="range" name="range-fill" min="0" max="100" step="1" value="20" aria-label="Настройка заливки">
+                    <div class="user-photo__visual-range">
+                      <div class="user-photo__range-thumb" title="Залить"></div>
+                    </div>
+                  </li>
+                  <li class="user-photo__tools-item">
+                    <button class="button button--icon user-photo__button user-photo__button--contrast" type="button" name="button-contrast" aria-label="Инструмент Контраст">
+                    </button>
+                    <input class="user-photo__range user-photo__range--contrast visually-hidden" type="range" name="range-contrast" min="0" max="100" step="1" value="50" aria-label="Настройка контраста">
+                    <div class="user-photo__visual-range">
+                      <div class="user-photo__range-thumb" title="Контраст"></div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="user-photo__controls-list">
+                  <li class="user-photo__controls-item">
+                    <button class="button button--text user-photo__post" type="submit" name="button-post">Запостить</button>
+                  </li>
+                  <li class="user-photo__controls-item">
+                    <button class="button button--text user-photo__cancel" type="reset" name="button-cancel">Отмена</button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </form>
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer page-footer--container container">
         <div class="page-footer__logo">
           <a href="index.html" class="page-footer__logo-link">
-            <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="146.3px" height="40.375px" role="img"
+            <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="146px" height="40px" role="img"
               aria-label="Логотип Пинк" focusable="false">
               <use xlink:href="#logo-pink-blue-mobile"></use>
             </svg>
-            <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="146.3px" height="40.375px" role="img"
+            <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="146px" height="40px" role="img"
               aria-label="Логотип Пинк" focusable="false">
               <use xlink:href="#logo-pink-blue-desktop"></use>
             </svg>
@@ -267,9 +271,9 @@
         </div>
 
         <div class="page-footer__copyright">
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="page-footer__copyright-description">Разработано</span>
-            <svg class="page-footer__copyright-image" width="26.943px" height="34.09px" role="img"
+            <svg class="page-footer__copyright-image" width="27px" height="34px" role="img"
               aria-label="Разработано  HTML Academy" focusable="false">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
@@ -279,6 +283,5 @@
 
     </div>
     <script src="js/script.min.js"></script>
-    <script src="js/customize.js"></script>
   </body>
 </html>

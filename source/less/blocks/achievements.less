@@ -1,13 +1,19 @@
 .achievements {
   margin-bottom: 28px;
 
+  @media (max-width: @page-min-mobile) {
+    width: 100%;
+  }
+
   @media (min-width: @page-width-tablet) {
     order: 4;
     padding: 1px 60px 50px;
     margin-bottom: 25px;
+    margin-top: 27px;
   }
 
   @media (min-width: @page-width-desktop) {
+    margin-top: 16px;
     padding-bottom: 20px;
   }
 }
@@ -24,6 +30,11 @@
 .achievements__title {
   @media (min-width: @page-width-tablet) {
     padding: 0 32px;
+    margin-top: -10px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    margin-top: -8px;
   }
 }
 

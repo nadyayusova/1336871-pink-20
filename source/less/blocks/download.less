@@ -10,6 +10,7 @@
 
   @media (min-width: @page-width-tablet) {
     position: absolute;
+    right: calc(50% - 10px);
     top: 350px;
     z-index: 10;
     width: 340px;
@@ -18,8 +19,8 @@
   }
 
   @media (min-width: @page-width-desktop) {
+    right: calc(50% + 149px);
     top: 421px;
-    left: 110px;
   }
 }
 
@@ -72,6 +73,11 @@
   min-width: 48px;
   min-height: 57px;
 
+  .button--icon {
+    width: 48px;
+    height: 57px;
+  }
+
   &--iphone {
     background: url("../img/logo-apple.svg") center center no-repeat;
   }
@@ -79,6 +85,10 @@
   &--android {
     min-width: 50px;
     background: url("../img/logo-android.svg") center 8px no-repeat;
+
+    .button--icon {
+      width: 50px;
+    }
   }
 
   &--windows {
