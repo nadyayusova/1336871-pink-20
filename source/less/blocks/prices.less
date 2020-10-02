@@ -6,17 +6,20 @@
 .prices {
   padding-top: 106px;
   padding-bottom: 46px;
-  background: linear-gradient(-3.5deg, @bg-color-sup 95%, @bg-color-basic 5%);
+  background-color: @bg-color-sup;
+  text-align: center;
+  background-position: 0 0;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   overflow: hidden;
 
   @media (min-width: @page-width-tablet) {
-    padding: 97px 20px 31px;
-    background: linear-gradient(-3.5deg, @bg-color-sup 91%, @bg-color-basic 9%);
+    padding: 97px 0 31px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 180px 130px 59px;
-    background: linear-gradient(-4.75deg, @bg-color-sup 82%, @bg-color-basic 18%);
+    padding: 180px 0 59px;
   }
 }
 
@@ -25,6 +28,12 @@
 }
 
 .prices__container {
+  @media (min-width: @page-width-tablet) {
+    width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: @page-width-desktop) {
     width: 940px;
   }
@@ -79,6 +88,7 @@
     padding: 5px 15px;
     font-size: @text-size-small;
     line-height: 30px;
+    text-align: left;
   }
 
   @media (min-width: @page-width-desktop) {
@@ -230,6 +240,7 @@
   font-size: @text-size-small;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: left;
 
   @media (min-width: @page-width-tablet) {
     width: 155px;

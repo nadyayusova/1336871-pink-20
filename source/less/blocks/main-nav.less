@@ -11,7 +11,7 @@
   @media (min-width: @page-width-desktop) {
     flex-direction: row;
     justify-content: space-between;
-    width: calc(@page-width-desktop - 20px);
+    max-width: calc(@page-width-desktop - @menu-item-left-margin);
   }
 }
 
@@ -195,7 +195,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    width: calc(620px + @menu-item-left-margin);
+    width: 100%;
+    max-width: calc(620px + @menu-item-left-margin);
     min-height: 110px;
   }
 }

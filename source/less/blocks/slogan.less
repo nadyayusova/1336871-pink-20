@@ -17,11 +17,36 @@
   }
 
   @media (min-width: @page-width-desktop) {
+    max-width: 640px;
     min-height: 239px;
-    padding: 91px 284px 20px;
+    padding: 91px 0 20px;
   }
 }
 
 .slogan__text {
-  margin: 0;
+  margin: 0 auto;
+}
+
+.slogan__text--photo {
+  max-width: 250px;
+
+  @media (min-width: @page-width-tablet) {
+    max-width: 500px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    max-width: 575px;
+  }
+}
+
+.slogan__text--form {
+  max-width: 280px;
+
+  @media (min-width: @page-width-tablet) {
+    max-width: 500px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    max-width: 800px;
+  }
 }

@@ -22,6 +22,13 @@
 
 .user-photo__form {
   background-color: @bg-color-sup;
+
+  @media (min-width: @page-width-desktop) {
+    max-width: @page-width-desktop;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: @bg-color-basic;
+  }
 }
 
 .user-photo__form-container {
@@ -31,6 +38,7 @@
   width: @page-width-mobile;
   margin-left: auto;
   margin-right: auto;
+  background-color: @bg-color-sup;
 
   @media (min-width: @page-width-tablet) {
     flex-direction: row;
@@ -177,6 +185,12 @@
   background-size: contain;
   opacity: 0.3;
 
+  @media (max-width: @page-min-mobile) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   @media (min-width: @page-width-tablet) {
     width: 39px;
     height: 39px;
@@ -253,15 +267,18 @@
   opacity: 1;
 }
 
-.user-photo__tools-item--active .user-photo__button--crop {
+.user-photo__tools-item--active .user-photo__button--crop,
+.user-photo__tools-item--active .user-photo__button--crop:hover {
   background-image: url("../img/icon-editor-crop-active.svg");
 }
 
-.user-photo__tools-item--active .user-photo__button--fill {
+.user-photo__tools-item--active .user-photo__button--fill,
+.user-photo__tools-item--active .user-photo__button--fill:hover {
   background-image: url("../img/icon-editor-fill-active.svg");
 }
 
-.user-photo__tools-item--active .user-photo__button--contrast {
+.user-photo__tools-item--active .user-photo__button--contrast,
+.user-photo__tools-item--active .user-photo__button--contrast:hover {
   background-image: url("../img/icon-editor-contrast-active.svg");
 }
 
@@ -308,9 +325,19 @@
   &:active {
     background-color: @text-color-accent;
   }
+
+  &:active {
+    box-shadow: 0 0 0 2px @text-color-plain;
+  }
 }
 
-.user-photo__range--crop ~ .user-photo__visual-range .user-photo__range-thumb {
+.user-photo__range--crop:focus ~ .user-photo__visual-range .user-photo__range-thumb,
+.user-photo__range--fill:focus ~ .user-photo__visual-range .user-photo__range-thumb,
+.user-photo__range--contrast:focus ~ .user-photo__visual-range .user-photo__range-thumb {
+  box-shadow: 0 0 0 2px @text-color-plain;
+}
+
+.user-photo__range-thumb--crop {
   left: 80%;
 
   @media (min-width: @page-width-tablet) {
@@ -322,7 +349,7 @@
   }
 }
 
-.user-photo__range--fill ~ .user-photo__visual-range .user-photo__range-thumb {
+.user-photo__range-thumb--fill {
   left: 20%;
 
   @media (min-width: @page-width-tablet) {
@@ -334,7 +361,7 @@
   }
 }
 
-.user-photo__range--contrast ~ .user-photo__visual-range .user-photo__range-thumb {
+.user-photo__range-thumb--contrast {
   left: 50%;
 
   @media (min-width: @page-width-tablet) {

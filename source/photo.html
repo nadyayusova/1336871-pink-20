@@ -36,14 +36,12 @@
               <span class="visually-hidden">Открыть или закрыть меню</span>
             </button>
           </div>
-          <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
             <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Фотографии</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">HTML&nbsp;Academy</a></li>
           </ul>
-          </div>
         </nav>
       </header>
 
@@ -51,11 +49,13 @@
         <h1 class="visually-hidden">Галерея фотографий, обработка и загрузка фотографии пользователя</h1>
         <div class="page-title">
           <div class="page-title__container container">
-            <p>Фотографии<br>пользователей</p>
+            <p class="page-title__text">Фотографии<br>пользователей</p>
           </div>
         </div>
 
-        <p class="slogan container">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="slogan">
+          <p class="slogan__text slogan__text--photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
 
         <section class="gallery">
           <h2 class="visually-hidden">Галерея фотографий пользователей</h2>
@@ -202,7 +202,7 @@
                     </button>
                     <input class="user-photo__range user-photo__range--crop visually-hidden" type="range" name="range-crop" min="0" max="100" step="1" value="80" aria-label="Настройка обрезки">
                     <div class="user-photo__visual-range">
-                      <div class="user-photo__range-thumb" title="Обрезать"></div>
+                      <div class="user-photo__range-thumb user-photo__range-thumb--crop" title="Обрезать"></div>
                     </div>
                   </li>
                   <li class="user-photo__tools-item">
@@ -210,7 +210,7 @@
                     </button>
                     <input class="user-photo__range user-photo__range--fill visually-hidden" type="range" name="range-fill" min="0" max="100" step="1" value="20" aria-label="Настройка заливки">
                     <div class="user-photo__visual-range">
-                      <div class="user-photo__range-thumb" title="Залить"></div>
+                      <div class="user-photo__range-thumb user-photo__range-thumb--fill" title="Залить"></div>
                     </div>
                   </li>
                   <li class="user-photo__tools-item">
@@ -218,7 +218,7 @@
                     </button>
                     <input class="user-photo__range user-photo__range--contrast visually-hidden" type="range" name="range-contrast" min="0" max="100" step="1" value="50" aria-label="Настройка контраста">
                     <div class="user-photo__visual-range">
-                      <div class="user-photo__range-thumb" title="Контраст"></div>
+                      <div class="user-photo__range-thumb user-photo__range-thumb--contrast" title="Контраст"></div>
                     </div>
                   </li>
                 </ul>

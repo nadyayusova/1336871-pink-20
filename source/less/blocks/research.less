@@ -2,6 +2,7 @@
   display: none;
 
   @media (min-width: @page-width-tablet) {
+    width: 100%;
     display: block;
   }
 
@@ -13,11 +14,12 @@
 .research__container {
   @media (min-width: @page-width-tablet) {
     position: relative;
-    padding: 96px 20px 30px 330px;
+    padding: 96px 0 30px 330px;
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 153px 166px 111px 500px;
+    width: 100%;
+    padding: 153px 0 111px 500px;
   }
 }
 
@@ -58,9 +60,9 @@
 
 .research__header {
   @media (min-width: @page-width-tablet) {
+    width: 210px;
     margin: 0;
     margin-bottom: 10px;
-    margin-right: 100px;
 
     font-weight: 700;
     font-size: @text-size-headers;
@@ -69,6 +71,7 @@
   }
 
   @media (min-width: @page-width-desktop) {
+    width: 300px;
     margin-bottom: 25px;
     line-height: 30px;
   }
@@ -76,6 +79,7 @@
 
 .research__description {
   @media (min-width: @page-width-tablet) {
+    width: 310px;
     margin: 0;
     margin-bottom: 10px;
     font-weight: 400;
@@ -84,6 +88,9 @@
   }
 
   @media (min-width: @page-width-desktop) {
+    width: 100%;
+    min-width: 440px;
+    max-width: 535px;
     margin-bottom: 31px;
     font-size: @text-size-normal;
     line-height: 30px;

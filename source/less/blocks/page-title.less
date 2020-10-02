@@ -69,22 +69,26 @@
   padding: 71px 30px 10px;
 
   @media (min-width: @page-width-tablet) {
+    width: 100%;
     padding: 126px 30px 5px;
   }
 
   @media (min-width: @page-width-desktop) {
+    position: relative;
+    width: 100%;
     min-height: 394px;
-    padding: 120px 220px 10px;
+    padding: 120px 0 10px;
   }
 }
 
 .page-title--index .page-title__container {
   padding: 86px 20px 312px;
+  overflow: hidden;
 
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: auto;
-  background-position: 0 175px;
+  background-position: left calc(50% - 31px) top 175px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/iphone-hand-mobile@2x.png");
@@ -95,7 +99,7 @@
     padding: 204px 385px 381px 66px;
 
     background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: -20px 184px;
+    background-position: right 50% top 184px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/iphone-hand-tablet@2x.png");
@@ -104,14 +108,56 @@
   }
 
   @media (min-width: @page-width-desktop) {
-    padding: 209px 790px 437px 150px;
+    width: 100%;
+    min-height: 394px;
+    padding: 209px 0 644px;
 
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: 145px 209px;
+    background-position: right calc(50% - 71px) top 209px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/iphone-hand-desktop@2x.png");
       background-size: 1050px auto;
     }
+  }
+}
+
+.page-title__text {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @page-width-desktop) {
+    max-width: 760px;
+  }
+}
+
+.page-title--index .page-title__text {
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: @page-width-tablet) {
+    max-width: 200px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    position: absolute;
+    right: calc(50% + 200px);
+    max-width: 240px;
+    margin: 0;
+  }
+}
+
+.page-title--form .page-title__text {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @page-width-tablet) {
+    max-width: 500px;
+  }
+
+  @media (min-width: @page-width-desktop) {
+    max-width: 750px;
   }
 }

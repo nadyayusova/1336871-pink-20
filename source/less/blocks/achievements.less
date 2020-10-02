@@ -7,14 +7,14 @@
 
   @media (min-width: @page-width-tablet) {
     order: 4;
-    padding: 1px 60px 50px;
+    padding: 1px 58px 48px;
     margin-bottom: 25px;
-    margin-top: 27px;
+    margin-top: 20px;
   }
 
   @media (min-width: @page-width-desktop) {
-    margin-top: 16px;
-    padding-bottom: 20px;
+    margin-top: 11px;
+    padding: 44px 60px 59px;
   }
 }
 
@@ -28,6 +28,10 @@
 }
 
 .achievements__title {
+  @media (max-width: @page-min-mobile) {
+    width: 100%;
+  }
+
   @media (min-width: @page-width-tablet) {
     padding: 0 32px;
     margin-top: -10px;
@@ -38,15 +42,23 @@
   }
 }
 
+.achievements__title-text {
+  @media (max-width: @page-min-mobile) {
+    display: inline-block;
+    width: 250px;
+  }
+}
+
 .achievements__list {
   .reset-list;
 
   @media (min-width: @page-width-desktop) {
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    flex-wrap: wrap;
-    height: 200px;
+    display: grid;
+    grid-template-columns: 259px 240px 211px;
+    grid-template-rows: 35px 35px;
+    grid-auto-rows: 35px;
+    column-gap: 54px;
+    row-gap: 47px;
   }
 }
 
@@ -56,6 +68,40 @@
   @media (min-width: @page-width-tablet) {
     margin: 43px 0 0;
   }
+
+  @media (min-width: @page-width-desktop) {
+    margin: 0;
+  }
+}
+
+.achievements__item:nth-child(1) {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.achievements__item:nth-child(2) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.achievements__item:nth-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.achievements__item:nth-child(4) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.achievements__item:nth-child(5) {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+
+.achievements__item:nth-child(6) {
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
 
 .achievements__label::before {
@@ -69,6 +115,7 @@
   border: 2px solid @border-color-checkbox;
   border-radius: 2px;
   cursor: pointer;
+  outline: 0;
 
   @media (min-width: @page-width-tablet) {
     margin-right: 19px;
@@ -78,13 +125,11 @@
 
 .achievements__label {
   &:hover::before {
-    outline: 0;
     border-color: @text-color-plain;
   }
 
   &:active::before,
   &:focus::before {
-    outline: 0;
     border-color: @text-color-accent;
   }
 }
